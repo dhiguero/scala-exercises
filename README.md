@@ -89,4 +89,24 @@ def getAverageMaxSpeed(vehicles: List[Vehicle]): Double
 * Use pattern matching in the filter function.
 * Generate a list of 50 vehicles using random values.
 
+**Extensions**
 
+* Generate a new vehicle that is both AirVehicle and GroundVehicle.
+
+### Exercise 4
+
+Define a linked list data structure with the following public methods:
+
+* head: Obtain the first element of the list.
+* last: Obtain the last element of the list.
+* isEmpty: Whether the list is empty.
+* get(index): Get the element at possition index if possible. Return an option.
+* add: Add a new element to the list.
+* size: Get the size of the list.
+
+**Notes**
+
+* The list must accept generic types.
+* The list is mutable but it is implemented using in-mutable structures.
+* The list must be implemented as a linked list.
+* Use of scala or Java collections as internal structures is forbidden.

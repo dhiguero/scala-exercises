@@ -14,36 +14,45 @@
  * limitations under the License.
  */
 
-package org.scala.examples
+package org.scala.examples.basics.visibility
 
-object HelloWorld {
+import org.scala.examples.basics.visibility.other.ClassC
 
-  /**
-   * Constant.
-   */
-  val Hi : String = "Hi from object"
+object Visibility{
 
   /**
-   * Entry point for the HelloWorld class.
+   * Visibility main.
    * @param args The arguments.
    */
   def main(args: Array[String]) : Unit = {
-    println("Hello world from main!")
-    val obj = new HelloWorld
-    obj.sayHi()
+    val v = new Visibility
+    v.checkVisibility()
+    v.printPrivateValues()
   }
 }
 
 /**
- * Basic hello world example.
+ * Variable and method visibility.
  */
-class HelloWorld{
+class Visibility {
 
   /**
-   * Method that print the contents of the Hi constant.
+   * Method to check the visibility.
    */
-  def sayHi() : Unit = {
-    println(HelloWorld.Hi)
+  private def checkVisibility() : Unit = {
+    val a = new ClassA
+    val b = new ClassB
+    val c = new ClassC
+    println(a.publicVal)
+    println(b.publicVal)
+    println(c.publicVal)
+  }
+
+  /**
+   * Print the private values of ClassA, ClassB, and ClassC.
+   */
+  private def printPrivateValues() : Unit = {
+    // TODO Add a new method in ClassA, ClassB, and ClassC to print the values.
   }
 
 }

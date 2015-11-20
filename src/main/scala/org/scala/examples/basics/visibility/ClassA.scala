@@ -14,36 +14,26 @@
  * limitations under the License.
  */
 
-package org.scala.examples
-
-object HelloWorld {
-
-  /**
-   * Constant.
-   */
-  val Hi : String = "Hi from object"
-
-  /**
-   * Entry point for the HelloWorld class.
-   * @param args The arguments.
-   */
-  def main(args: Array[String]) : Unit = {
-    println("Hello world from main!")
-    val obj = new HelloWorld
-    obj.sayHi()
-  }
-}
+package org.scala.examples.basics.visibility
 
 /**
- * Basic hello world example.
+ * Example class to understand visibility.
  */
-class HelloWorld{
+class ClassA {
 
   /**
-   * Method that print the contents of the Hi constant.
+   * Public variable.
    */
-  def sayHi() : Unit = {
-    println(HelloWorld.Hi)
-  }
+  val publicVal : String = "public A"
+
+  /**
+   * Private variable.
+   */
+  private val privateVal : String = "private A"
+
+  /**
+   * Protected val.
+   */
+  protected val protectedVal : String = "protected A"
 
 }
